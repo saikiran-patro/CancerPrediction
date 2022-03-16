@@ -14,6 +14,23 @@ from keras.preprocessing import image
 from keras.applications.vgg16 import preprocess_input 
 import numpy as np
 
+'''
+import ssl
+from pyngrok import ngrok, conf, installer
+
+pyngrok_config = conf.get_default()
+
+if not os.path.exists(pyngrok_config.ngrok_path):
+    myssl = ssl.create_default_context();
+    myssl.check_hostname=False
+    myssl.verify_mode=ssl.CERT_NONE
+    installer.install_ngrok(pyngrok_config.ngrok_path, context=context)
+
+public_url = ngrok.connect(5000).public_url
+'''
+
+
+
 
 model=load_model('model_vgg16.h5')
 root='D:/STUDY FILES/Breast_Cancer_prediction-main/chest_xray/val/'
@@ -26,7 +43,7 @@ def lungPredict(filepath,fileName):
     x=np.expand_dims(x,axis=0)
     img_data=preprocess_input(x)
     classes=model.predict(img_data)
-    os.remove(filepath)
+    
     if(classes[0][0]):
         return 1
     else:
@@ -117,4 +134,4 @@ def predict2():
     
     
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)

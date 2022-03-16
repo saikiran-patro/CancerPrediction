@@ -185,15 +185,16 @@ label{
     justify-content:center;
     align-items:center;
     flex-direction: column;
-    flex:1;
-    flex-grow: 1;
+    height:600px;
   }
 
   .select_submit{
     width:100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    
     
 
     
@@ -218,6 +219,10 @@ label{
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+    
+}
+.predict_button{
+    margin-top:50px;padding:10px;width:200px;
 }
 #results{
 
@@ -265,5 +270,8 @@ label{
     }
     .top1-right{
         width:100%;
+    }
+    .info1-left{
+        width:80%;
     }
 }

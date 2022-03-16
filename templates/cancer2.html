@@ -11,6 +11,7 @@
         <link rel="icon" sizes="192x192" href="{{url_for('static', filename='logo.png')}}">
         <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
         <script src="https://kit.fontawesome.com/d7b7ce1508.js" crossorigin="anonymous"></script>
+        <script src="{{url_for('static',filename='script.js')}}"> </script>
         <title>Bio App</title>
     </head>
 <body>
@@ -46,22 +47,23 @@
           
         </div>
     </nav>
+    <center><h1 style="margin:25px;">Upload Image File</h1></center>
 
     <div class="lungContainer">
 
-        <h1 style="margin:25px;">Upload Image File</h1>
-        <img src="{{url_for('static', filename='images/NORMAL2-IM-1440-0001.jpeg')}}"/>
+        
+        <img src="static/images/NORMAL2-IM-1442-0001.jpeg"  id="imageSource"/>
          <div id="lung_form">
 
             
             <form method="POST" action ="/predict2" style="width: 20%" enctype="multipart/form-data">
                 <div class="file-input">
-                    <input type="file" id="file" class="file" name="image">
+                    <input type="file" id="file" class="file" name="image" onchange='Upload()'>
                     
                 </div>
                 <div class="select_submit">
                     <label id="file_select" for="file">Select file</label>
-                    <button type="submit">Predict</button>
+                    <button class="predict_button" type="submit">Predict</button>
                 </div>
                   
                 
@@ -70,6 +72,7 @@
              </form>
          </div>
     </div>
+
     
 </body>
 </html>
