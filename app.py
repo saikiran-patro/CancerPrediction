@@ -130,7 +130,7 @@ def predict2():
             return render_template('normalLung.html',image_loc=location)
         else:
             return render_template('infectedLung.html',image_loc=location)
-    
+    return render_template('cancer2.html')
     
     
 if __name__ == "__main__":

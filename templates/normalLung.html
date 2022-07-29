@@ -51,9 +51,12 @@
 
     <div id="results">
          
-          <img id="normal_lung" src="static/images/{{image_loc}}" alt="">
-          <h2>Result: <span style="color:#34BE82; font-weight: bold"> Normal</span></h2>
+          <img id="normal_lung" src="static/images/{{image_loc}}" alt="IMG">
+          <h2>Result: <span style="color:#34BE82; font-weight: bold"> Normal</span></h2><br>
 
+          <form action="/predict2" method="GET">
+          <button type="submit" class="btn btn-outline-success btn-lg" > <i class="fas fa-arrow-left"></i> Back</button>
+           </form>
     </div>
 
    

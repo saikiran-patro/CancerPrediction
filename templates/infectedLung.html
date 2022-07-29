@@ -51,9 +51,12 @@
 
     <div id="results">
          
-        <img id="infected_lung" src="static/images/{{image_loc}}" alt="">
+        <img id="infected_lung" src="static/images/{{image_loc}}" alt="IMG" >
         <h2>Result: <span style="color:#DA1212; font-weight: bold"> Infected </span></h2>
-        <h3 style="color:#B33030; font-weight: bold"> Diagnosis required</h3>
+        <h3 style="color:#B33030; font-weight: bold"> Diagnosis required</h3><br>
+        <form action="/predict2" method="GET">
+          <button type="submit" class="btn btn-outline-danger btn-lg" > <i class="fas fa-arrow-left"></i> Back</button>
+           </form>
 
   </div>
    
